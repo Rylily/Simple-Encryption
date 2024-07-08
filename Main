@@ -1,0 +1,14 @@
+def decription(a):
+  mylist=list(a)
+  for i in range(len(mylist)):
+    value=ord(mylist[i])
+    mylist[i]=chr(value-2)
+  print(mylist)
+  last=mylist.pop(0)
+  mylist.append(last)
+  text="".join(mylist)
+  return text
+    
+string=input("Enter encrypted message: ")
+result=decription(string)
+print(result)
